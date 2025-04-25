@@ -11,9 +11,44 @@
 <body>
     <h1>Aplicativo de lista de tarefas</h1>
     <div>
-        <input type="text" id="addtarefa" placeholder="Digite uma nova tarefa...">
-        <button id="addTaskButton">Adicionar Tarefa</button>
+        <!-- Campo de entrada para nova tarefa -->
+        <input type="text" id="tarefa" placeholder="Digite uma nova tarefa...">
+        <button id="addtarefa">Adicionar Tarefa</button>
     </div>
-    
+    <ul id="taskList"></ul>
+    <script>
+        document.getElementById('addtarefa').addEventListener('click', function() {
+            const addtarefa = document.getElementById('addtarefa');
+            const taskText = addtarefa.value.trim();
+            if (taskText) {
+                const li = document.createElement('li');
+                li.textContent = taskText;
+                li.addEventListener('click', function() {
+                    li.classList.toggle('completed');
+                });
+                document.getElementById('taskList').appendChild(li);
+                taskInput.value = ''; // Limpa o campo de entrada
+            }
+        });
+    </script>
+    <div>
+        <h2>Lista de Tarefas</h2>
+        <ul id="taskList"></ul>
+    </div>
+    <div>
+        <h3>Tarefas Concluídas</h3>
+        <ul id="completedTasks"></ul>
+    </div>
+    <div>
+        <h3>Tarefas Pendentes</h3>
+        <ul id="pendingTasks"></ul>
+    </div>
+    <div>
+        <h3>Tarefas Prioritárias</h3>
+        <ul id="importantTasks"></ul>
+    </div>
+
+
+
 </body>
 </html>

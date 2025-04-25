@@ -15,6 +15,11 @@
         <input type="text" id="tarefa" placeholder="Digite uma nova tarefa...">
         <button id="addtarefa">Adicionar Tarefa</button>
     </div>
+    <div>
+        <!-- Campo de  escolher tarefa como prioridade -->
+        <input type="checkbox" id="prioridade" value="prioridade">
+        <label for="prioridade">Prioridade</label>
+    </div>
     <ul id="taskList"></ul>
     <script>
         document.getElementById('addtarefa').addEventListener('click', function() {
@@ -26,14 +31,13 @@
                 li.addEventListener('click', function() {
                     li.classList.toggle('completed');
                 });
-                document.getElementById('taskList').appendChild(li);
+                document.getElementById('listaTarefa').appendChild(li);
                 taskInput.value = ''; // Limpa o campo de entrada
             }
         });
     </script>
-    <div>
-        <h2>Lista de Tarefas</h2>
-        <ul id="taskList"></ul>
+    <div >
+        <h2 class="listaTarefa">Lista de Tarefas</h2>
     </div>
     <div>
         <h3>Tarefas Concluídas</h3>

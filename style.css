@@ -1,0 +1,15 @@
+body{
+    background-color:rgb(166, 166, 168);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.tarefa{
+    color: #333;
+    text-decoration: none;
+}
+.tarefa:hover{
+    color: #000;
+    text-decoration: underline;
+}

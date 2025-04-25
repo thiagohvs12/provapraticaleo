@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(166, 166, 168);
+    background-color:rgba(166, 166, 168, 0.808);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
@@ -12,4 +12,34 @@ body{
 .tarefa:hover{
     color: #000;
     text-decoration: underline;
+}
+.listaTarefa{
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+.listaTarefa ul{
+    list-style-type: none;
+    padding: 0;
+}
+.completedtask{
+    text-decoration: line-through;
+    color: #999;
+}
+.taskconcluidas,
+.taskpendente,
+.taskprioridade {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    width: 30%; /* Adjust width as needed to fit them side by side */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.taskconcluidas {
+    background-color: #d4edda; /* Light green for completed tasks */
+    border: 1px solid #c3e6cb; /* borda verde em volta do título*/
+    padding: 10px;
+    border-radius: 5px;
 }

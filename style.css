@@ -43,3 +43,15 @@ body{
     padding: 10px;
     border-radius: 5px;
 }
+.taskpendente {
+    background-color: #fff3cd; /*  */
+    border: 1px solid #ffeeba; /* borda amarela em volta do título */
+    padding: 10px;
+    border-radius: 5px;
+}
+.taskprioridade {
+    background-color: #eb0a0a; /*  */
+    border: 1px solid #ec1515; /* borda amarela em volta do título */
+    padding: 10px;
+    border-radius: 5px;
+}

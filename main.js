@@ -8,4 +8,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskPendenteList = document.getElementById('taskpendente');
     const completedTasksList = document.getElementById('completedTasks');
 
+    // Seleciona os elementos onde os contadores serão exibidos
+    const prioridadeCountSpan = document.createElement('span');
+    prioridadeCountSpan.textContent = ' (0)';  // Inicializa com 0
+    document.querySelector('.taskprioridade').appendChild(prioridadeCountSpan);
+
+    const pendenteCountSpan = document.createElement('span');
+    pendenteCountSpan.textContent = ' (0)';    // Inicializa com 0
+    document.querySelector('.taskpendente').appendChild(pendenteCountSpan);
+
+    const concluidaCountSpan = document.createElement('span');
+    concluidaCountSpan.textContent = ' (0)';  // Inicializa com 0
+    document.querySelector('.taskconcluidas').appendChild(concluidaCountSpan);
+
+
     

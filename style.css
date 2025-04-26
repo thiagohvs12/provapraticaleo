@@ -1,57 +1,109 @@
-body{
-    background-color:rgba(166, 166, 168, 0.808);
+
+/* Estilos gerais para o corpo da página */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Estilos para o título principal (h1) */
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+/* Estilos para as divs */
+
+div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* Estilos para campos de entrada de texto */
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+}
+/* Estilos para botões */
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.tarefa{
-    color: #333;
-    text-decoration: none;
+button:hover {
+    background-color: #0056b3;
 }
-.tarefa:hover{
-    color: #000;
-    text-decoration: underline;
-}
-.listaTarefa{
-    margin: 0 auto;
-    width: fit-content;
-    text-align: center;
-}
-.listaTarefa ul{
-    list-style-type: none;
+/* Estilos para listas não ordenadas (ul) */
+
+ul {
+    list-style: none;
     padding: 0;
+    margin: 20px auto;
+    width: 50%;
 }
-.completedtask{
+
+ul li {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Estilos para itens de lista concluídos */
+
+ul li.completed {
     text-decoration: line-through;
-    color: #999;
+    color: gray;
 }
-.taskconcluidas,
-.taskpendente,
-.taskprioridade {
-    display: inline-block;
-    margin: 10px;
-    vertical-align: top;
-    width: 30%; /* Adjust width as needed to fit them side by side */
+
+.listaTarefa, .taskprioridade, .taskpendente, .taskconcluidas {
     text-align: center;
-    box-sizing: border-box;
+    margin-top: 30px;
 }
+/* Estilos para a seção de tarefas concluídas */
 
 .taskconcluidas {
-    background-color: #d4edda; /* Light green for completed tasks */
-    border: 1px solid #c3e6cb; /* borda verde em volta do título*/
+    background-color: #3ee064;
+    border: 1px solid #51ec75;
     padding: 10px;
     border-radius: 5px;
+    width: 30%;
+    display: block; /* Alterado para block */
+    margin: 10px auto; /* Mantido o auto para centralizar horizontalmente se necessário */
+    vertical-align: top;
+    box-sizing: border-box;
 }
+/* Estilos para a seção de tarefas pendentes */
+
 .taskpendente {
-    background-color: #fff3cd; /*  */
-    border: 1px solid #ffeeba; /* borda amarela em volta do título */
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
     padding: 10px;
     border-radius: 5px;
+    width: 30%;
+     display: block; /* Alterado para block */
+    margin: 10px auto; /* Mantido o auto para centralizar horizontalmente se necessário */
+    vertical-align: top;
+    box-sizing: border-box;
 }
+/* Estilos para a seção de tarefas  prioridades */
+
 .taskprioridade {
-    background-color: #eb0a0a; /*  */
-    border: 1px solid #ec1515; /* borda amarela em volta do título */
+    background-color: #eb0a0a;
+    border: 1px solid #ec1515;
     padding: 10px;
     border-radius: 5px;
+    width: 30%;
+    display: block; /* Alterado para block */
+    margin: 10px auto; /* Mantido o auto para centralizar horizontalmente se necessário */
+    vertical-align: top;
+    box-sizing: border-box;
 }

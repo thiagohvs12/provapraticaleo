@@ -71,6 +71,39 @@ updateCounts(); // Atualiza os contadores após a alteração
 }
 });
 li.appendChild(checkbox); // Adiciona o checkbox ao item da lista
+// Cria um botão para remover a tarefa da lista
+const removeButton = document.createElement('button');
+removeButton.textContent = "Remover"; // Define o texto do botão
+removeButton.classList.add('remove-button'); // Adiciona uma classe para estilo (opcional)
+
+// Adiciona um ouvinte de evento ao botão de remover para excluir a tarefa
+removeButton.addEventListener('click', function() {
+li.remove(); // Remove o item da lista (tarefa) quando o botão é clicado
+
+// Remove a tarefa da lista de prioridades ou pendentes, se estiver em alguma delas
+if (prioridadeCheck.checked) {
+taskPrioridadeList.removeChild(li);
+} else {
+taskPendenteList.removeChild(li);
+}
+completedTasksList.removeChild(li); // Remove da lista de concluídas também, se estiver lá
+updateCounts(); // Atualiza os contadores após a remoção
+});
+li.appendChild(removeButton); // Adiciona o botão de remover ao item da lista
+
+// Adiciona a tarefa à lista de prioridades ou à lista de pendentes, dependendo do checkbox
+if (prioridadeCheck.checked) {
+taskPrioridadeList.appendChild(li); // Adiciona à lista de prioridades
+} else {
+taskPendenteList.appendChild(li);   // Adiciona à lista de pendentes
+}
+
+taskInput.value = '';         // Limpa o campo de entrada após adicionar a tarefa
+prioridadeCheck.checked = false; // Desmarca o checkbox de prioridade
+updateCounts(); // Atualiza os contadores após adicionar a tarefa
+}
+});
+});
 
 
 

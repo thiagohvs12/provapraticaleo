@@ -27,3 +27,11 @@ function updateCounts() {
     pendenteCountSpan.textContent = ` (${taskPendenteList.children.length})`;
     concluidaCountSpan.textContent = ` (${completedTasksList.children.length})`;
 }
+// Chamada inicial para exibir os contadores com os valores iniciais
+updateCounts();
+
+// Adiciona o evento de botão "Adicionar Tarefa"
+addButton.addEventListener('click', function() {
+    const taskText = taskInput.value.trim();
+
+    

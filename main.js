@@ -33,5 +33,23 @@ updateCounts();
 // Adiciona o evento de botão "Adicionar Tarefa"
 addButton.addEventListener('click', function() {
     const taskText = taskInput.value.trim();
+// Verifica se o texto da tarefa não está vazio
+if (taskText) {
+    // Cria um novo item de lista  para representar a tarefa
+    const li = document.createElement('li');
+    li.textContent = taskText; // Define o texto do item da lista com o texto da tarefa
+
+    // Cria um checkbox para marcar a tarefa como concluída
+    const checkbox = document.createElement('input');
+    checkbox.type = "checkbox"; // Define o tipo do input como checkbox
+
+    // Adiciona um ouvinte de evento ao checkbox para lidar com a conclusão da tarefa
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            // Se o checkbox estiver marcado, a tarefa foi concluída
+            li.classList.add('completed'); // Adiciona a classe 'completed' para aplicar estilo de tarefa concluída
+            completedTasksList.appendChild(li); // Move a tarefa para a lista de tarefas concluídas
+
+
 
     

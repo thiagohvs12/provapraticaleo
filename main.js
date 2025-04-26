@@ -21,5 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     concluidaCountSpan.textContent = ' (0)';  // Inicializa com 0
     document.querySelector('.taskconcluidas').appendChild(concluidaCountSpan);
 
-
-    
+// Função para atualizar os contadores
+function updateCounts() {
+    prioridadeCountSpan.textContent = ` (${taskPrioridadeList.children.length})`;
+    pendenteCountSpan.textContent = ` (${taskPendenteList.children.length})`;
+    concluidaCountSpan.textContent = ` (${completedTasksList.children.length})`;
+}

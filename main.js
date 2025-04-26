@@ -49,6 +49,28 @@ if (taskText) {
             // Se o checkbox estiver marcado, a tarefa foi concluída
             li.classList.add('completed'); // Adiciona a classe 'completed' para aplicar estilo de tarefa concluída
             completedTasksList.appendChild(li); // Move a tarefa para a lista de tarefas concluídas
+// Remove a tarefa da lista de prioridades ou da lista de pendentes, dependendo de onde estava
+if (prioridadeCheck.checked) {
+    taskPrioridadeList.removeChild(li);
+} else {
+    taskPendenteList.removeChild(li);
+}
+updateCounts(); // Atualiza os contadores após a alteração
+} else {
+// Se o checkbox estiver desmarcado, a tarefa não está mais concluída
+li.classList.remove('completed'); // Remove a classe 'completed'
+
+// Move a tarefa de volta para a lista de prioridades ou para a lista de pendentes
+if (prioridadeCheck.checked) {
+    taskPrioridadeList.appendChild(li);
+} else {
+    taskPendenteList.appendChild(li);
+}
+completedTasksList.removeChild(li); // Remove a tarefa da lista de concluídas
+updateCounts(); // Atualiza os contadores após a alteração
+}
+});
+li.appendChild(checkbox); // Adiciona o checkbox ao item da lista
 
 
 
